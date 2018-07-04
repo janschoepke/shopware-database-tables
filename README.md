@@ -1,0 +1,1 @@
+shopware-database-tables
