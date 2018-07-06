@@ -5,34 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shopware Database Tables</title>
+    <title>Shopware Database Table Inspector</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/bootstrap.min.css" />
     <link rel="stylesheet" href="src/css/main.css">
 
 </head>
 <body>
-    <div class="header-blue">
+    <div class="header-custom">
         <nav class="navbar navbar-default navigation-clean-search">
             <div class="container">
-                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Shopware Database Table Inspector</a>
+                <div class="navbar-header"><span class="navbar-brand">Shopware Database Table Inspector</span>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <form class="navbar-form navbar-left" target="_self">
                         <div class="form-group">
                             <label class="control-label" for="filter"><i class="glyphicon glyphicon-search"></i></label>
-                            <input class="form-control search-field" type="search" id="filter">
+                            <input class="form-control search-field" type="search" id="filter" autocomplete="off">
                         </div>
                     </form>
                     <p class="navbar-text navbar-right">
-                        <select class="form-control" id="major-version">
+                        <select class="form-control select-version" id="major-version">
                             <option value="sw-5-2">v5.2</option>
                             <option value="sw-5-3">v5.3</option>
                             <option value="sw-5-4" selected="selected">v5.4</option>
                         </select>
-                        <select class="form-control" id="specific-version">
+                        <select class="form-control select-version" id="specific-version">
                             <option value="sw-5-4-0">5.4.0</option>
                             <option value="sw-5-4-1">5.4.1</option>
                             <option value="sw-5-4-2">5.4.2</option>
@@ -44,104 +43,29 @@
                 </div>
             </div>
         </nav>
+        <div class="container">
+            <div class="alert alert-info" role="alert">
+                <h1 class="h4">Database Documentation for Shopware <span class="current-version">5.4.5</span></h1>
+                <p>All information without guarantee. Please note that we are not affiliated with Shopware AG in any way. <a href="http://shopware.com" target="_blank">Shopware</a> is a product of Shopware AG.</p>
+            </div>
+        </div>
 
         <div id="ajax-container" class="container">
 
         </div>
+
+        <div class="container">
+            <hr />
+            <div class="text-center small">
+                <a href="https://github.com/janschoepke" target="_blank">janschoepke, 2018.</a>
+            </div>
+        </div>
+
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
     <script src="src/js/jcTextHighlighterFilter.js"></script>
-
-    <script type="text/javascript">
-        var swVersions = {
-            "sw-5-2": [
-                {value: "sw-5-2-0", label: "5.2.0"},
-                {value: "sw-5-2-1", label: "5.2.1"},
-                {value: "sw-5-2-2", label: "5.2.2"},
-                {value: "sw-5-2-3", label: "5.2.3"},
-                {value: "sw-5-2-4", label: "5.2.4"},
-                {value: "sw-5-2-5", label: "5.2.5"},
-                {value: "sw-5-2-6", label: "5.2.6"},
-                {value: "sw-5-2-7", label: "5.2.7"},
-                {value: "sw-5-2-8", label: "5.2.8"},
-                {value: "sw-5-2-9", label: "5.2.9"},
-                {value: "sw-5-2-10", label: "5.2.10"},
-                {value: "sw-5-2-11", label: "5.2.11"},
-                {value: "sw-5-2-12", label: "5.2.12"},
-                {value: "sw-5-2-13", label: "5.2.13"},
-                {value: "sw-5-2-14", label: "5.2.14"},
-                {value: "sw-5-2-15", label: "5.2.15"},
-                {value: "sw-5-2-16", label: "5.2.16"},
-                {value: "sw-5-2-17", label: "5.2.17"},
-                {value: "sw-5-2-18", label: "5.2.18"},
-                {value: "sw-5-2-19", label: "5.2.19"},
-                {value: "sw-5-2-20", label: "5.2.20"},
-                {value: "sw-5-2-21", label: "5.2.21"},
-                {value: "sw-5-2-22", label: "5.2.22"},
-                {value: "sw-5-2-23", label: "5.2.23"},
-                {value: "sw-5-2-24", label: "5.2.24"},
-                {value: "sw-5-2-25", label: "5.2.25"},
-                {value: "sw-5-2-26", label: "5.2.26"},
-                {value: "sw-5-2-27", label: "5.2.27"}
-            ],
-            "sw-5-3": [
-                {value: "sw-5-3-0", label: "5.3.0"},
-                {value: "sw-5-3-1", label: "5.3.1"},
-                {value: "sw-5-3-2", label: "5.3.2"},
-                {value: "sw-5-3-3", label: "5.3.3"},
-                {value: "sw-5-3-4", label: "5.3.4"},
-                {value: "sw-5-3-5", label: "5.3.5"},
-                {value: "sw-5-3-6", label: "5.3.6"},
-                {value: "sw-5-3-7", label: "5.3.7"}
-            ],
-            "sw-5-4": [
-                {value: "sw-5-4-0", label: "5.4.0"},
-                {value: "sw-5-4-1", label: "5.4.1"},
-                {value: "sw-5-4-2", label: "5.4.2"},
-                {value: "sw-5-4-3", label: "5.4.3"},
-                {value: "sw-5-4-4", label: "5.4.4"},
-                {value: "sw-5-4-5", label: "5.4.5"}
-            ]
-        };
-
-        $(document).ready(function(){
-            $("#filter").jcOnPageFilter({animateHideNShow: true,
-                focusOnLoad:false,
-                highlightColor:'yellow',
-                textColorForHighlights:'#000000',
-                caseSensitive:false,
-                hideNegatives:true,
-                parentLookupClass:'jcorgFilterTextParent',
-                childBlockClass:'jcorgFilterTextChild'});
-        });
-
-        function changeContent(filename) {
-            $('#ajax-container').hide().load('sw-versions/' + filename + '.html').fadeIn();
-        }
-
-        $('#specific-version').on('change', function() {
-            $('#filter').val('');
-            $('#filter').trigger('keyup');
-            changeContent(this.value);
-        });
-
-        $('#major-version').on('change', function() {
-            $('#specific-version').find('option').remove();
-            $.each(swVersions[this.value], function (i, item) {
-                $('#specific-version').append($('<option>', {
-                    value: item.value,
-                    text : item.label
-                }));
-            });
-        });
-
-        $(function() {
-            changeContent($('#specific-version').val());
-        });
-
-    </script>
-
+    <script src="src/js/main.js"></script>
 </body>
 </html>
