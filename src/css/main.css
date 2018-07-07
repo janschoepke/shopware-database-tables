@@ -52,6 +52,18 @@
     border-bottom:1px solid #ccc;
 }
 
+.panel-title {
+    display: inline;
+}
+
+#ajax-container {
+    min-height: 100vh;
+}
+
+.footer {
+    margin-bottom: 40px;
+}
+
 @media screen and (min-width: 768px) {
     .select-version{
         width: auto;

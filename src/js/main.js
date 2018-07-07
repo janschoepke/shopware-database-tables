@@ -49,13 +49,17 @@ var swVersions = {
     ]
 };
 
-function changeContent(filename) {
-    $('#ajax-container').hide().load('sw-versions/' + filename + '.html').fadeIn();
-}
-
 $(function() {
     var $filter = $("#filter");
     var $specificVersion = $("#specific-version");
+    var $ajaxContainer = $('#ajax-container');
+
+    function changeContent(filename) {
+        $ajaxContainer.hide().load('sw-versions/' + filename + '.html', function() {
+            console.log('test');
+            $ajaxContainer.fadeIn(1000);
+        });
+    }
 
     changeContent($specificVersion.val());
 
@@ -79,11 +83,17 @@ $(function() {
 
     $('#major-version').on('change', function() {
         $specificVersion.find('option').remove();
+        var lastID = swVersions[this.value].length - 1;
+
         $.each(swVersions[this.value], function (i, item) {
             $specificVersion.append($('<option>', {
                 value: item.value,
                 text : item.label
             }));
+            if(i === lastID) {
+                $specificVersion.trigger('change');
+            }
         });
+
     });
 });
