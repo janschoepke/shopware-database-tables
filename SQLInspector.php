@@ -114,9 +114,7 @@ and
         </div>";
         }
 
-        //TODO add margin bottom im Footer
         //TODO Google Analytics
-        //TODO Implement php array function
         //add get param with current version
 
         date_default_timezone_set('Europe/Berlin');
@@ -142,19 +140,77 @@ and
                     }
                 }
             }
-            echo "Inspection of " . $name . " finished successful. \n";
 
             $htmlString = $this->generateDocumentationSyntax($tables);
 
             $var_str = substr(var_export($htmlString, true),1 , -1);
             file_put_contents('sw-versions/sw-' . substr($name, 9) . '.html', $var_str);
+
+            echo "Inspection of " . $name . " finished successful. \n";
+        }
+    }
+
+    public function getPHPArrayFiles($NAMES) {
+        $tables = null;
+        $result = null;
+
+        foreach ($NAMES as $database) {
+            echo "Building PHP Array for " . $database . ".\n";
+            $tables = $this->getSQLTables($database);
+            $tables = array_column($tables, 'tableName');
+
+            foreach ($tables as $table) {
+                $tableRows = $this->getTableRows($table);
+                $result[$table] = array_column($tableRows, 0);
+            }
+
+            file_put_contents('array-data/sw-' . substr($database, 9) . '.json', json_encode($result));
+
+            echo "Build of PHP Array for " . $database . " completed. \n";
+        }
+    }
+
+    private function compareDatabases($file1, $file2) {
+        $arr1 = json_decode(file_get_contents($file1), true);
+        $arr2 = json_decode(file_get_contents($file2), true);
+
+        $diff1 = array_map('unserialize',
+            array_diff(array_map('serialize', $arr1), array_map('serialize', $arr2)));
+
+        $diff2 = array_map('unserialize',
+            array_diff(array_map('serialize', $arr2), array_map('serialize', $arr1)));
+
+        $totalDiff = array_merge($diff1, $diff2);
+
+        return $totalDiff;
+    }
+
+    public function createSyncMatrixFiles ($NAMES) {
+
+        $path    = 'array-data';
+        $files = array_diff(scandir($path), array('.', '..'));
+
+        foreach ($NAMES as $name) {
+            if(in_array("sw-" . substr($name, 9) . ".json", $files)) {
+                echo "Building Sync Matrix for " . $name . ".\n";
+                $syncMatrix = [];
+                foreach($files as $file) {
+                    if($file === 'sw-' . substr($name, 9) . '.json') {
+                        continue;
+                    }
+
+                    $syncMatrix[str_replace('.json', '', $file)] = array_keys($this->compareDatabases("array-data/sw-" . substr($name, 9) . ".json", "array-data/" . $file));
+                }
+                file_put_contents('compare-data/' . substr($name, 9) . '.json', json_encode($syncMatrix));
+                echo "Build of Sync Matrix for " . $name . " completed. \n";
+            }
         }
     }
 }
 
 $sqlInspector = new SQLInspector($HOST, $USER, $PASS);
-$sqlInspector->getDocumentationFiles($NAMES);
-
-
+//$sqlInspector->getDocumentationFiles($NAMES);
+//$sqlInspector->getPHPArrayFiles($NAMES);
+$sqlInspector->createSyncMatrixFiles($NAMES);
 
 
