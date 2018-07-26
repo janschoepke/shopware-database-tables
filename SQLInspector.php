@@ -82,7 +82,7 @@ function generateDocumentationSyntax($multidimensionalArray) {
                                 } else {
                                     $htmlString .= "
                                     <tr id=\"" . $table['tableName'] . "." . $row[0] . "\">
-                                        <td class=\"col-md-4\">" . $row[0] . "</tdclass>
+                                        <td class=\"col-md-4\">" . $row[0] . "</td>
                                         <td class=\"col-md-3\">" . $row[1] . "</td>";
                                     if(isset($row['foreignData'])) {
                                         $htmlString .= "<td class=\"col-md-5\">Foreign key: <a href=\"#" . $row['foreignData'] . "\">" . $row['foreignData'] . "</a></td>
@@ -126,6 +126,7 @@ if ($mysqli->connect_errno) {
 $tables = null;
 
 foreach($NAMES as $name) {
+    echo "Inspection of " . $name . " starting. \n";
     $tables = getSQLTables($name);
     foreach($tables as &$tableValue) {
         $tableValue['rowInformation'] = getTableRows($tableValue['tableName']);
