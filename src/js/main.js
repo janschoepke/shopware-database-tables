@@ -47,6 +47,12 @@ var swVersions = {
         {value: "sw-5-4-4", label: "5.4.4"},
         {value: "sw-5-4-5", label: "5.4.5"},
         {value: "sw-5-4-6", label: "5.4.6"}
+    ],
+    "sw-5-5": [
+        {value: "sw-5-5-0", label: "5.5.0"},
+        {value: "sw-5-5-1", label: "5.5.1"},
+        {value: "sw-5-5-2", label: "5.5.2"},
+        {value: "sw-5-5-3", label: "5.5.3"}
     ]
 };
 
@@ -58,20 +64,8 @@ $(function() {
     function changeContent(filename) {
         $ajaxContainer.hide().load('sw-versions/' + filename + '.html', function() {
             $ajaxContainer.fadeIn(1000);
-            ga('send', 'pageview');
         });
     }
-
-    function gaTracker(id){
-        $.getScript('//www.google-analytics.com/analytics.js'); // jQuery shortcut
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', id, 'auto');
-        ga('set', 'anonymizeIp', true);
-        ga('send', 'pageview');
-    }
-
-    changeContent($specificVersion.val());
-    gaTracker('UA-121985336-1');
 
     $filter.jcOnPageFilter({
         animateHideNShow: true,
@@ -105,4 +99,6 @@ $(function() {
             }
         });
     });
+
+    $specificVersion.trigger('change');
 });

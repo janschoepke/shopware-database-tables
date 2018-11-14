@@ -252,5 +252,7 @@ return [
     "s_emotion_presets" => "All installed presets.",
     "s_order_basket_signatures" => "Signatures for baskets. ",
     "s_search_custom_facet" => "<< no table description found >>",
-    "s_search_custom_sorting"  => "<< no table description found >>"
+    "s_benchmark_config"  => "Configuration for Benchmarks",
+    "s_search_custom_sorting"  => "<< no table description found >>",
+    "s_es_backend_backlog"  => "<< no table description found >>"
 ];

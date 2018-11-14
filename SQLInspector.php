@@ -19,9 +19,11 @@ class SQLInspector {
     }
 
     private function getSQLTables($database){
-        $this->mysqli->select_db($database);
-
+        $result = $this->mysqli->select_db($database);
+        
         $result = $this->mysqli->query("SELECT TABLE_NAME AS tableName FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '" . $database . "';");
+        //$result = $this->mysqli->query("USE " . $database . "; SELECT * FROM s_core_countries");
+
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
@@ -125,7 +127,7 @@ and
 
     public function getDocumentationFiles($NAMES) {
         $tables = null;
-
+        
         foreach($NAMES as $name) {
             echo "Inspection of " . $name . " starting. \n";
             $tables = $this->getSQLTables($name);
@@ -144,7 +146,7 @@ and
             $htmlString = $this->generateDocumentationSyntax($tables);
 
             $var_str = substr(var_export($htmlString, true),1 , -1);
-            file_put_contents('sw-versions/sw-' . substr($name, 9) . '.html', $var_str);
+            file_put_contents('sw-versions/sw-' . substr($name, 11) . '.html', $var_str);
 
             echo "Inspection of " . $name . " finished successful. \n";
         }
@@ -164,7 +166,7 @@ and
                 $result[$table] = array_column($tableRows, 0);
             }
 
-            file_put_contents('array-data/sw-' . substr($database, 9) . '.json', json_encode($result));
+            file_put_contents('array-data/sw-' . substr($database, 11) . '.json', json_encode($result));
 
             echo "Build of PHP Array for " . $database . " completed. \n";
         }
@@ -191,17 +193,17 @@ and
         $files = array_diff(scandir($path), array('.', '..'));
 
         foreach ($NAMES as $name) {
-            if(in_array("sw-" . substr($name, 9) . ".json", $files)) {
+            if(in_array("sw-" . substr($name, 8) . ".json", $files)) {
                 echo "Building Sync Matrix for " . $name . ".\n";
                 $syncMatrix = [];
                 foreach($files as $file) {
-                    if($file === 'sw-' . substr($name, 9) . '.json') {
+                    if($file === 'sw-' . substr($name, 8) . '.json') {
                         continue;
                     }
 
-                    $syncMatrix[str_replace('.json', '', $file)] = array_keys($this->compareDatabases("array-data/sw-" . substr($name, 9) . ".json", "array-data/" . $file));
+                    $syncMatrix[str_replace('.json', '', $file)] = array_keys($this->compareDatabases("array-data/sw-" . substr($name, 11) . ".json", "array-data/" . $file));
                 }
-                file_put_contents('compare-data/' . substr($name, 9) . '.json', json_encode($syncMatrix));
+                file_put_contents('compare-data/' . substr($name, 11) . '.json', json_encode($syncMatrix));
                 echo "Build of Sync Matrix for " . $name . " completed. \n";
             }
         }
@@ -209,8 +211,8 @@ and
 }
 
 $sqlInspector = new SQLInspector($HOST, $USER, $PASS);
-//$sqlInspector->getDocumentationFiles($NAMES);
-//$sqlInspector->getPHPArrayFiles($NAMES);
+$sqlInspector->getDocumentationFiles($NAMES);
+$sqlInspector->getPHPArrayFiles($NAMES);
 $sqlInspector->createSyncMatrixFiles($NAMES);
 
 
