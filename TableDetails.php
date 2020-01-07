@@ -254,5 +254,15 @@ return [
     "s_search_custom_facet" => "<< no table description found >>",
     "s_benchmark_config"  => "Configuration for Benchmarks",
     "s_search_custom_sorting"  => "<< no table description found >>",
-    "s_es_backend_backlog"  => "<< no table description found >>"
+    "s_es_backend_backlog"  => "<< no table description found >>",
+    "s_articles_notification_attributes" => "Attributes for notifications.", 
+    "s_core_shops_attributes" => "Attributes for shops.",
+    "s_categories_manual_sorting" => "<< no table description found >>", 
+    "s_content_types" => "<< no table description found >>", 
+    "s_core_acl_privilege_requirements" => "<< no table description found >>",
+    "s_mail_log" => "<< no table description found >>", 
+    "s_mail_log_contact" => "<< no table description found >>", 
+    "s_mail_log_document" => "<< no table description found >>", 
+    "s_mail_log_recipient" => "<< no table description found >>", 
+    "s_plugin_schema_version" => "<< no table description found >>"
 ];

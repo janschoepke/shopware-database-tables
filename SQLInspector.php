@@ -4,10 +4,15 @@ ini_set("display_errors", 1);
 
 include 'mysqlData.php';
 
-
 class SQLInspector {
 
     private $mysqli;
+
+    //In this case the database is named xxxxxxxx_5_5_7, so the first 9 chars need to be cut.
+    const VERSION_OFFSET = 9;
+
+    //In this case the version number in the database name is represented by '_', e.g. 5_7_7.
+    const VERSION_SEPARATOR = '_';
 
     public function __construct($HOST, $USER, $PASS) {
         $this->mysqli = new mysqli($HOST, $USER, $PASS);
@@ -22,7 +27,6 @@ class SQLInspector {
         $result = $this->mysqli->select_db($database);
         
         $result = $this->mysqli->query("SELECT TABLE_NAME AS tableName FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '" . $database . "';");
-        //$result = $this->mysqli->query("USE " . $database . "; SELECT * FROM s_core_countries");
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
@@ -65,7 +69,7 @@ and
             if(isset($descriptions[$table['tableName']])) {
                 $htmlString .= $descriptions[$table['tableName']];
             } else {
-                echo '<br>information for table ' . $table['tableName'] . ' required!';
+                echo '\ninformation for table ' . $table['tableName'] . ' required!';
             }
 
             $htmlString .= "
@@ -146,7 +150,7 @@ and
             $htmlString = $this->generateDocumentationSyntax($tables);
 
             $var_str = substr(var_export($htmlString, true),1 , -1);
-            file_put_contents('sw-versions/sw-' . substr($name, 11) . '.html', $var_str);
+            file_put_contents('sw-versions/sw-' . str_replace(SQLInspector::VERSION_SEPARATOR, '-', substr($name, SQLInspector::VERSION_OFFSET)) . '.html', $var_str);
 
             echo "Inspection of " . $name . " finished successful. \n";
         }
@@ -166,7 +170,7 @@ and
                 $result[$table] = array_column($tableRows, 0);
             }
 
-            file_put_contents('array-data/sw-' . substr($database, 11) . '.json', json_encode($result));
+            file_put_contents('array-data/sw-' . str_replace(SQLInspector::VERSION_SEPARATOR, '-', substr($database, SQLInspector::VERSION_OFFSET)) . '.json', json_encode($result));
 
             echo "Build of PHP Array for " . $database . " completed. \n";
         }
@@ -193,17 +197,19 @@ and
         $files = array_diff(scandir($path), array('.', '..'));
 
         foreach ($NAMES as $name) {
-            if(in_array("sw-" . substr($name, 8) . ".json", $files)) {
+            $currentVersionString = str_replace(SQLInspector::VERSION_SEPARATOR, '-', substr($name, SQLInspector::VERSION_OFFSET));
+
+            if(in_array("sw-" . $currentVersionString . ".json", $files)) {
                 echo "Building Sync Matrix for " . $name . ".\n";
                 $syncMatrix = [];
                 foreach($files as $file) {
-                    if($file === 'sw-' . substr($name, 8) . '.json') {
+                    if($file === 'sw-' . $currentVersionString . '.json') {
                         continue;
                     }
 
-                    $syncMatrix[str_replace('.json', '', $file)] = array_keys($this->compareDatabases("array-data/sw-" . substr($name, 11) . ".json", "array-data/" . $file));
+                    $syncMatrix[str_replace('.json', '', $file)] = array_keys($this->compareDatabases("array-data/sw-" . $currentVersionString . ".json", "array-data/" . $file));
                 }
-                file_put_contents('compare-data/' . substr($name, 11) . '.json', json_encode($syncMatrix));
+                file_put_contents('compare-data/' . $currentVersionString . '.json', json_encode($syncMatrix));
                 echo "Build of Sync Matrix for " . $name . " completed. \n";
             }
         }
