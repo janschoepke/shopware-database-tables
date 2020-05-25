@@ -9,14 +9,13 @@
 
     <link rel="stylesheet" href="src/css/bootstrap.min.css" />
     <link rel="stylesheet" href="src/css/main.css">
-
 </head>
 
 <body>
     <div class="header-custom">
         <nav class="navbar navbar-default navigation-clean-search">
             <div class="container">
-                <div class="navbar-header"><span class="navbar-brand">Shopware Database Table Inspector</span>
+                <div class="navbar-header"><span class="navbar-brand">Shopware Database Inspector</span>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle
                             navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
@@ -24,7 +23,7 @@
                     <form class="navbar-form navbar-left" target="_self">
                         <div class="form-group">
                             <label class="control-label" for="filter"><i class="glyphicon glyphicon-search"></i></label>
-                            <input class="form-control search-field" type="search" id="filter" autocomplete="off">
+                            <input class="form-control search-field" type="search" id="filter" placeholder="Search tables" autocomplete="off">
                         </div>
                     </form>
                     <p class="navbar-text navbar-right">
@@ -33,26 +32,23 @@
                             <option value="sw-6" selected="selected">Shopware 6</option>
                         </select>
                         <select class="form-control select-version" id="major-version">
-                            <option value="sw-5-2">v5.2</option>
-                            <option value="sw-5-3">v5.3</option>
-                            <option value="sw-5-4">v5.4</option>
-                            <option value="sw-5-5">v5.5</option>
-                            <option value="sw-5-6" selected="selected">v5.6</option>
+                            <option value="sw-6|sw-6-1">6.1</option>
+                            <option value="sw-6|sw-6-2" selected="selected">6.2</option>
                         </select>
                         <select class="form-control select-version" id="specific-version">
-                            <option value="sw-5-6-0">5.6.0</option>
-                            <option value="sw-5-6-1">5.6.1</option>
-                            <option value="sw-5-6-2">5.6.2</option>
-                            <option value="sw-5-6-3">5.6.3</option>
-                            <option value="sw-5-6-4" selected="selected">5.6.4</option>
+                            <option value="sw-6-2-0-rc1">6.2.0 (RC1)</option>
+                            <option value="sw-6-2-0" selected="selected">6.2.0</option>
                         </select>
                     </p>
                 </div>
             </div>
         </nav>
         <div class="container">
+            <div class="alert alert-success" role="alert">
+                <strong>Yay!</strong> From now on we support Shopware 6!
+            </div>
             <div class="alert alert-info" role="alert">
-                <h1 class="h4">Database Documentation for Shopware <span class="current-version">5.6.4</span></h1>
+                <h1 class="h4">Database Documentation for Shopware <span class="current-version"></span></h1>
                 <p>All information without guarantee. Please note that we are not affiliated with Shopware AG in any
                     way. <a href="http://shopware.com" target="_blank">Shopware</a> is a product of Shopware AG.</p>
             </div>

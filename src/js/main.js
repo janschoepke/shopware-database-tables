@@ -89,30 +89,45 @@ var swVersions = {
                 "sw-5-6-1": {value: "sw-5-6-1", label: "5.6.1"},
                 "sw-5-6-2": {value: "sw-5-6-2", label: "5.6.2"},
                 "sw-5-6-3": {value: "sw-5-6-3", label: "5.6.3"},
-                "sw-5-6-4": {value: "sw-5-6-4", label: "5.6.4"}
+                "sw-5-6-4": {value: "sw-5-6-4", label: "5.6.4"},
+                "sw-5-6-5": {value: "sw-5-6-5", label: "5.6.5"},
+                "sw-5-6-6": {value: "sw-5-6-6", label: "5.6.6"}
             }
         }
     },
     "sw-6": {
-        "sw-6-0": {
-            value: "sw-6|sw-6-0",
-            label: "6.0",
-            entries: {
-                "sw-6-0-0-ea-1": {value: "sw-6-0-0-ea-1", label: "6.0.0 (EA1)"},
-                "sw-6-0-0-ea-1-1": {value: "sw-6-0-0-ea-1-1", label: "6.0.0 (EA1.1)"},
-                "sw-6-0-0-ea-1-2": {value: "sw-6-0-0-ea-1-2", label: "6.0.0 (EA2)"}
-            },
-        },
+        // "sw-6-0": {
+        //     value: "sw-6|sw-6-0",
+        //     label: "6.0",
+        //     entries: {
+        //         "sw-6-0-0-ea-1": {value: "sw-6-0-0-ea-1", label: "6.0.0 (EA1)"},
+        //         "sw-6-0-0-ea-1-1": {value: "sw-6-0-0-ea-1-1", label: "6.0.0 (EA1.1)"},
+        //         "sw-6-0-0-ea-1-2": {value: "sw-6-0-0-ea-1-2", label: "6.0.0 (EA2)"}
+        //     },
+        // },
         "sw-6-1": {
             value: "sw-6|sw-6-1",
             label: "6.1",
             entries: {
-                "sw-6-1-0-rc-1": {value: "sw-6-1-0-rc-1", label: "6.1.0 (RC1)"},
-                "sw-6-1-0-rc-2": {value: "sw-6-1-0-rc-2", label: "6.1.0 (RC2)"},
-                "sw-6-1-0-rc-3": {value: "sw-6-1-0-rc-3", label: "6.1.0 (RC3)"},
-                "sw-6-1-0-rc-4": {value: "sw-6-1-0-rc-4", label: "6.1.0 (RC4)"},
+                "sw-6-1-0-rc1": {value: "sw-6-1-0-rc1", label: "6.1.0 (RC1)"},
+                "sw-6-1-0-rc2": {value: "sw-6-1-0-rc2", label: "6.1.0 (RC2)"},
+                "sw-6-1-0-rc3": {value: "sw-6-1-0-rc3", label: "6.1.0 (RC3)"},
+                "sw-6-1-0-rc4": {value: "sw-6-1-0-rc4", label: "6.1.0 (RC4)"},
                 "sw-6-1-0": {value: "sw-6-1-0", label: "6.1.0"},
                 "sw-6-1-1": {value: "sw-6-1-1", label: "6.1.1"},
+                "sw-6-1-2": {value: "sw-6-1-2", label: "6.1.2"},
+                "sw-6-1-3": {value: "sw-6-1-3", label: "6.1.3"},
+                "sw-6-1-4": {value: "sw-6-1-4", label: "6.1.4"},
+                "sw-6-1-5": {value: "sw-6-1-5", label: "6.1.5"},
+                "sw-6-1-6": {value: "sw-6-1-6", label: "6.1.6"}
+            }
+        },
+        "sw-6-2": {
+            value: "sw-6|sw-6-2",
+            label: "6.2",
+            entries: {
+                "sw-6-2-0-rc1": {value: "sw-6-2-0-rc1", label: "6.2.0 (RC1)"},
+                "sw-6-2-0": {value: "sw-6-2-0", label: "6.2.0"}
             }
         }
     }
@@ -191,5 +206,5 @@ $(function () {
         });
     });
 
-    $softwareVersion.trigger('change');
+    $specificVersion.trigger('change');
 });
