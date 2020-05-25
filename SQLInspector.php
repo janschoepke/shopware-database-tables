@@ -32,7 +32,7 @@ class SQLInspector {
     }
 
     private function getTableRows($table) {
-        $result = $this->mysqli->query("DESCRIBE " . $table . ";");
+        $result = $this->mysqli->query("DESCRIBE `" . $table . "`;");
         return $result->fetch_all(MYSQLI_NUM);
     }
 
@@ -204,6 +204,13 @@ and
                 $syncMatrix = [];
                 foreach($files as $file) {
                     if($file === 'sw-' . $currentVersionString . '.json') {
+                        continue;
+                    }
+
+                    //Make sure, that only instances with same major version are compared (e.g. prevent comparison of Shopware 5 schema to Shopware 6 schema)
+                    $currentFile = explode("-", $file);
+                    $currentVersion = explode("-", $currentVersionString);
+                    if($currentFile[1] !== $currentVersion[0]) {
                         continue;
                     }
 
