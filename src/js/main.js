@@ -142,6 +142,12 @@ var swVersions = {
                 "sw-6-3-5-2": {value: "sw-6-3-5-2", label: "6.3.5.2"},
                 "sw-6-3-5-3": {value: "sw-6-3-5-3", label: "6.3.5.3"},
                 "sw-6-3-5-4": {value: "sw-6-3-5-4", label: "6.3.5.4"},
+            }
+        },
+        "sw-6-4": {
+            value: "sw-6|sw-6-4",
+            label: "6.4",
+            entries: {
                 "sw-6-4-0-0": {value: "sw-6-4-0-0", label: "6.4.0.0"},
             }
         }
