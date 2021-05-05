@@ -160,6 +160,7 @@ $(function () {
     var $majorVersion = $('#major-version');
     var $ajaxContainer = $('#ajax-container');
     var $softwareVersion = $('#software-version');
+    var initialPageLoad = true;
 
     function changeContent(filename) {
         $ajaxContainer.hide().load('sw-versions/' + filename + '.html', function () {
@@ -186,9 +187,15 @@ $(function () {
     $specificVersion.on('change', function () {
         unsetFilter();
         changeContent(this.value);
-        gtag('event', "changeVersion", {
-            'event_label': this.value,
+
+        if(!initialPageLoad) {
+            gtag('event', "changeVersion", {
+                'event_label': this.value,
             });
+        } else {
+            initialPageLoad = false;
+        }
+
         $('.current-version').html($specificVersion.find("option:selected").html());
     });
 
