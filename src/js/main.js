@@ -186,6 +186,9 @@ $(function () {
     $specificVersion.on('change', function () {
         unsetFilter();
         changeContent(this.value);
+        gtag('event', "changeVersion", {
+            'event_label': this.value,
+            });
         $('.current-version').html($specificVersion.find("option:selected").html());
     });
 
