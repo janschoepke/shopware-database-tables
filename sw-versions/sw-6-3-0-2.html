@@ -1,4 +1,4 @@
-<p class="lead">This database contains 175 tables.</p>
+<p class="lead">This database contains 185 tables.</p>
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
@@ -141,7 +141,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">shipping_method_translation</h3>
-                    <span class="badge pull-right">7 rows</span>
+                    <span class="badge pull-right">8 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -169,6 +169,10 @@
                                     </tr>
                                     <tr id="shipping_method_translation.description">
                                         <td class="col-md-4">description</td>
+                                        <td class="col-md-3">mediumtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="shipping_method_translation.tracking_url">
+                                        <td class="col-md-4">tracking_url</td>
                                         <td class="col-md-3">mediumtext</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="shipping_method_translation.custom_fields">
@@ -321,7 +325,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">customer</h3>
-                    <span class="badge pull-right">37 rows</span>
+                    <span class="badge pull-right">38 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -482,6 +486,10 @@
                                     <tr id="customer.remote_address">
                                         <td class="col-md-4">remote_address</td>
                                         <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="customer.tag_ids">
+                                        <td class="col-md-4">tag_ids</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -751,7 +759,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">property_group</h3>
-                    <span class="badge pull-right">5 rows</span>
+                    <span class="badge pull-right">6 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -784,6 +792,10 @@
                                     <tr id="property_group.updated_at">
                                         <td class="col-md-4">updated_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="property_group.filterable">
+                                        <td class="col-md-4">filterable</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -794,7 +806,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">property_group_translation</h3>
-                    <span class="badge pull-right">7 rows</span>
+                    <span class="badge pull-right">8 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -823,6 +835,10 @@
                                     <tr id="property_group_translation.description">
                                         <td class="col-md-4">description</td>
                                         <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="property_group_translation.position">
+                                        <td class="col-md-4">position</td>
+                                        <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="property_group_translation.custom_fields">
                                         <td class="col-md-4">custom_fields</td>
@@ -1821,6 +1837,49 @@
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">refresh_token</h3>
+                    <span class="badge pull-right">5 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="refresh_token.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="refresh_token.user_id">
+                                        <td class="col-md-4">user_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="refresh_token.token_id">
+                                        <td class="col-md-4">token_id</td>
+                                        <td class="col-md-3">varchar(80)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="refresh_token.issued_at">
+                                        <td class="col-md-4">issued_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="refresh_token.expires_at">
+                                        <td class="col-md-4">expires_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">state_machine_transition</h3>
                     <span class="badge pull-right">8 rows</span>
                 </div>
@@ -2203,7 +2262,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">user</h3>
-                    <span class="badge pull-right">14 rows</span>
+                    <span class="badge pull-right">15 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -2235,6 +2294,10 @@
                                     </tr>
                                     <tr id="user.last_name">
                                         <td class="col-md-4">last_name</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="user.title">
+                                        <td class="col-md-4">title</td>
                                         <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="user.email">
@@ -2541,7 +2604,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">shipping_method_price</h3>
-                    <span class="badge pull-right">12 rows</span>
+                    <span class="badge pull-right">13 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -2582,6 +2645,10 @@
                                     <tr id="shipping_method_price.price">
                                         <td class="col-md-4">price</td>
                                         <td class="col-md-3">double</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="shipping_method_price.currency_price">
+                                        <td class="col-md-4">currency_price</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="shipping_method_price.quantity_start">
                                         <td class="col-md-4">quantity_start</td>
@@ -2986,7 +3053,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">payment_method</h3>
-                    <span class="badge pull-right">9 rows</span>
+                    <span class="badge pull-right">10 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -3014,6 +3081,10 @@
                                     </tr>
                                     <tr id="payment_method.active">
                                         <td class="col-md-4">active</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="payment_method.after_order_enabled">
+                                        <td class="col-md-4">after_order_enabled</td>
                                         <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="payment_method.availability_rule_id">
@@ -3558,7 +3629,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">order</h3>
-                    <span class="badge pull-right">26 rows</span>
+                    <span class="badge pull-right">27 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -3667,6 +3738,10 @@
                                     <tr id="order.campaign_code">
                                         <td class="col-md-4">campaign_code</td>
                                         <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="order.customer_comment">
+                                        <td class="col-md-4">customer_comment</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="order.created_at">
                                         <td class="col-md-4">created_at</td>
@@ -4614,7 +4689,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">product_translation</h3>
-                    <span class="badge pull-right">12 rows</span>
+                    <span class="badge pull-right">13 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -4675,6 +4750,10 @@
                                     <tr id="product_translation.updated_at">
                                         <td class="col-md-4">updated_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="product_translation.pack_unit_plural">
+                                        <td class="col-md-4">pack_unit_plural</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -4744,7 +4823,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">product</h3>
-                    <span class="badge pull-right">62 rows</span>
+                    <span class="badge pull-right">64 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -4982,6 +5061,10 @@
                                         <td class="col-md-4">configurator_group_config</td>
                                         <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
+                                    <tr id="product.main_variant_id">
+                                        <td class="col-md-4">main_variant_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product.id">product.id</a></td>
+                                    </tr>
                                     <tr id="product.created_at">
                                         <td class="col-md-4">created_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
@@ -5004,6 +5087,10 @@
                                     </tr>
                                     <tr id="product.crossSellings">
                                         <td class="col-md-4">crossSellings</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="product.customFieldSets">
+                                        <td class="col-md-4">customFieldSets</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
@@ -5289,7 +5376,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">sales_channel_domain</h3>
-                    <span class="badge pull-right">9 rows</span>
+                    <span class="badge pull-right">10 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -5309,11 +5396,11 @@
                                     </tr>
                                     <tr id="sales_channel_domain.sales_channel_id">
                                         <td class="col-md-4">sales_channel_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel.id">sales_channel.id</a></td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel_language.sales_channel_id">sales_channel_language.sales_channel_id</a></td>
                                     </tr>
                                     <tr id="sales_channel_domain.language_id">
                                         <td class="col-md-4">language_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#language.id">language.id</a></td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel_language.language_id">sales_channel_language.language_id</a></td>
                                     </tr>
                                     <tr id="sales_channel_domain.url">
                                         <td class="col-md-4">url</td>
@@ -5326,6 +5413,10 @@
                                     <tr id="sales_channel_domain.snippet_set_id">
                                         <td class="col-md-4">snippet_set_id</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#snippet_set.id">snippet_set.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel_domain.hreflang_use_only_locale">
+                                        <td class="col-md-4">hreflang_use_only_locale</td>
+                                        <td class="col-md-3">tinyint(1) unsigned</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="sales_channel_domain.custom_fields">
                                         <td class="col-md-4">custom_fields</td>
@@ -5729,7 +5820,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">custom_field_set</h3>
-                    <span class="badge pull-right">6 rows</span>
+                    <span class="badge pull-right">7 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -5757,6 +5848,10 @@
                                     </tr>
                                     <tr id="custom_field_set.active">
                                         <td class="col-md-4">active</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="custom_field_set.global">
+                                        <td class="col-md-4">global</td>
                                         <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="custom_field_set.created_at">
@@ -6180,65 +6275,6 @@
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
-                    <h3 class="panel-title search-content jcorgFilterTextChild">mail_template_translation</h3>
-                    <span class="badge pull-right">9 rows</span>
-                </div>
-                <div class="panel-body jcorgFilterTextParent">
-                    <p class="jcorgFilterTextChild">
-                        
-                    </p>
-        
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <tr>
-                                <th class="col-md-4">column</th>
-                                <th class="col-md-3">type</th>
-                                <th class="col-md-5">additional</th>
-                            </tr>
-                                    <tr id="mail_template_translation.mail_template_id" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> mail_template_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#mail_template.id">mail_template.id</a></td>
-                                    </tr>
-                                    <tr id="mail_template_translation.language_id" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> language_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#language.id">language.id</a></td>
-                                    </tr>
-                                    <tr id="mail_template_translation.sender_name">
-                                        <td class="col-md-4">sender_name</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="mail_template_translation.subject">
-                                        <td class="col-md-4">subject</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="mail_template_translation.description">
-                                        <td class="col-md-4">description</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="mail_template_translation.content_html">
-                                        <td class="col-md-4">content_html</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="mail_template_translation.content_plain">
-                                        <td class="col-md-4">content_plain</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="mail_template_translation.created_at">
-                                        <td class="col-md-4">created_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="mail_template_translation.updated_at">
-                                        <td class="col-md-4">updated_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>    
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel-wrapper">
-            <div class="panel panel-default">
-                <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">mail_template_sales_channel</h3>
                     <span class="badge pull-right">6 rows</span>
                 </div>
@@ -6254,9 +6290,9 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="mail_template_sales_channel.id">
-                                        <td class="col-md-4">id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="mail_template_sales_channel.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
                                     <tr id="mail_template_sales_channel.mail_template_id">
                                         <td class="col-md-4">mail_template_id</td>
@@ -6767,13 +6803,13 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="user_recovery.id">
-                                        <td class="col-md-4">id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="user_recovery.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
-                                    <tr id="user_recovery.user_id" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> user_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#user.id">user.id</a></td>
+                                    <tr id="user_recovery.user_id">
+                                        <td class="col-md-4">user_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#user.id">user.id</a></td>
                                     </tr>
                                     <tr id="user_recovery.hash">
                                         <td class="col-md-4">hash</td>
@@ -6964,8 +7000,8 @@
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
-                    <h3 class="panel-title search-content jcorgFilterTextChild">mail_template_media</h3>
-                    <span class="badge pull-right">4 rows</span>
+                    <h3 class="panel-title search-content jcorgFilterTextChild">sales_channel</h3>
+                    <span class="badge pull-right">29 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -6979,21 +7015,121 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="mail_template_media.id" class="info">
+                                    <tr id="sales_channel.id" class="info">
                                         <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
-                                    <tr id="mail_template_media.mail_template_id">
-                                        <td class="col-md-4">mail_template_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#mail_template.id">mail_template.id</a></td>
+                                    <tr id="sales_channel.type_id">
+                                        <td class="col-md-4">type_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel_type.id">sales_channel_type.id</a></td>
                                     </tr>
-                                    <tr id="mail_template_media.media_id">
-                                        <td class="col-md-4">media_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#media.id">media.id</a></td>
+                                    <tr id="sales_channel.short_name">
+                                        <td class="col-md-4">short_name</td>
+                                        <td class="col-md-3">varchar(45)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
-                                    <tr id="mail_template_media.position">
-                                        <td class="col-md-4">position</td>
+                                    <tr id="sales_channel.configuration">
+                                        <td class="col-md-4">configuration</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.access_key">
+                                        <td class="col-md-4">access_key</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.language_id">
+                                        <td class="col-md-4">language_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#language.id">language.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.currency_id">
+                                        <td class="col-md-4">currency_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#currency.id">currency.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.payment_method_id">
+                                        <td class="col-md-4">payment_method_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#payment_method.id">payment_method.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.shipping_method_id">
+                                        <td class="col-md-4">shipping_method_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#shipping_method.id">shipping_method.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.country_id">
+                                        <td class="col-md-4">country_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#country.id">country.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.navigation_category_id">
+                                        <td class="col-md-4">navigation_category_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.id">category.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.navigation_category_version_id">
+                                        <td class="col-md-4">navigation_category_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.version_id">category.version_id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.navigation_category_depth">
+                                        <td class="col-md-4">navigation_category_depth</td>
                                         <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.hreflang_active">
+                                        <td class="col-md-4">hreflang_active</td>
+                                        <td class="col-md-3">tinyint(1) unsigned</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.hreflang_default_domain_id">
+                                        <td class="col-md-4">hreflang_default_domain_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel_domain.id">sales_channel_domain.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.footer_category_id">
+                                        <td class="col-md-4">footer_category_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.id">category.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.footer_category_version_id">
+                                        <td class="col-md-4">footer_category_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.version_id">category.version_id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.service_category_id">
+                                        <td class="col-md-4">service_category_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.id">category.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.service_category_version_id">
+                                        <td class="col-md-4">service_category_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.version_id">category.version_id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.active">
+                                        <td class="col-md-4">active</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.maintenance">
+                                        <td class="col-md-4">maintenance</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.maintenance_ip_whitelist">
+                                        <td class="col-md-4">maintenance_ip_whitelist</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.customer_group_id">
+                                        <td class="col-md-4">customer_group_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#customer_group.id">customer_group.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.mail_header_footer_id">
+                                        <td class="col-md-4">mail_header_footer_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#mail_header_footer.id">mail_header_footer.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.payment_method_ids">
+                                        <td class="col-md-4">payment_method_ids</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.analytics_id">
+                                        <td class="col-md-4">analytics_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel_analytics.id">sales_channel_analytics.id</a></td>
+                                    </tr>
+                                    <tr id="sales_channel.tax_calculation_type">
+                                        <td class="col-md-4">tax_calculation_type</td>
+                                        <td class="col-md-3">varchar(50)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -7449,9 +7585,9 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="document_base_config_sales_channel.id">
-                                        <td class="col-md-4">id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="document_base_config_sales_channel.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
                                     <tr id="document_base_config_sales_channel.document_base_config_id">
                                         <td class="col-md-4">document_base_config_id</td>
@@ -7591,8 +7727,8 @@
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
-                    <h3 class="panel-title search-content jcorgFilterTextChild">sales_channel</h3>
-                    <span class="badge pull-right">24 rows</span>
+                    <h3 class="panel-title search-content jcorgFilterTextChild">sales_channel_analytics</h3>
+                    <span class="badge pull-right">7 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -7606,101 +7742,33 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="sales_channel.id" class="info">
+                                    <tr id="sales_channel_analytics.id" class="info">
                                         <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
-                                    <tr id="sales_channel.type_id">
-                                        <td class="col-md-4">type_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel_type.id">sales_channel_type.id</a></td>
+                                    <tr id="sales_channel_analytics.tracking_id">
+                                        <td class="col-md-4">tracking_id</td>
+                                        <td class="col-md-3">varchar(50)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
-                                    <tr id="sales_channel.short_name">
-                                        <td class="col-md-4">short_name</td>
-                                        <td class="col-md-3">varchar(45)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="sales_channel.configuration">
-                                        <td class="col-md-4">configuration</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="sales_channel.access_key">
-                                        <td class="col-md-4">access_key</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="sales_channel.language_id">
-                                        <td class="col-md-4">language_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#language.id">language.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.currency_id">
-                                        <td class="col-md-4">currency_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#currency.id">currency.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.payment_method_id">
-                                        <td class="col-md-4">payment_method_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#payment_method.id">payment_method.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.shipping_method_id">
-                                        <td class="col-md-4">shipping_method_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#shipping_method.id">shipping_method.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.country_id">
-                                        <td class="col-md-4">country_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#country.id">country.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.navigation_category_id">
-                                        <td class="col-md-4">navigation_category_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.id">category.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.navigation_category_version_id">
-                                        <td class="col-md-4">navigation_category_version_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.version_id">category.version_id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.footer_category_id">
-                                        <td class="col-md-4">footer_category_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.id">category.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.footer_category_version_id">
-                                        <td class="col-md-4">footer_category_version_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.version_id">category.version_id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.service_category_id">
-                                        <td class="col-md-4">service_category_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.id">category.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.service_category_version_id">
-                                        <td class="col-md-4">service_category_version_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#category.version_id">category.version_id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.active">
+                                    <tr id="sales_channel_analytics.active">
                                         <td class="col-md-4">active</td>
                                         <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
-                                    <tr id="sales_channel.maintenance">
-                                        <td class="col-md-4">maintenance</td>
+                                    <tr id="sales_channel_analytics.track_orders">
+                                        <td class="col-md-4">track_orders</td>
                                         <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
-                                    <tr id="sales_channel.maintenance_ip_whitelist">
-                                        <td class="col-md-4">maintenance_ip_whitelist</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="sales_channel.customer_group_id">
-                                        <td class="col-md-4">customer_group_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#customer_group.id">customer_group.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.mail_header_footer_id">
-                                        <td class="col-md-4">mail_header_footer_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#mail_header_footer.id">mail_header_footer.id</a></td>
-                                    </tr>
-                                    <tr id="sales_channel.payment_method_ids">
-                                        <td class="col-md-4">payment_method_ids</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="sales_channel.created_at">
+                                    <tr id="sales_channel_analytics.created_at">
                                         <td class="col-md-4">created_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
-                                    <tr id="sales_channel.updated_at">
+                                    <tr id="sales_channel_analytics.updated_at">
                                         <td class="col-md-4">updated_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="sales_channel_analytics.anonymize_ip">
+                                        <td class="col-md-4">anonymize_ip</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -8109,7 +8177,7 @@
                                     </tr>
                                     <tr id="theme.preview_media_id">
                                         <td class="col-md-4">preview_media_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#media.id">media.id</a></td>
                                     </tr>
                                     <tr id="theme.parent_theme_id">
                                         <td class="col-md-4">parent_theme_id</td>
@@ -8229,8 +8297,8 @@
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
-                    <h3 class="panel-title search-content jcorgFilterTextChild">import_export_profile</h3>
-                    <span class="badge pull-right">10 rows</span>
+                    <h3 class="panel-title search-content jcorgFilterTextChild">product_custom_field_set</h3>
+                    <span class="badge pull-right">3 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -8244,45 +8312,17 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="import_export_profile.id" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    <tr id="product_custom_field_set.custom_field_set_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> custom_field_set_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#custom_field_set.id">custom_field_set.id</a></td>
                                     </tr>
-                                    <tr id="import_export_profile.name">
-                                        <td class="col-md-4">name</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="product_custom_field_set.product_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> product_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#product.id">product.id</a></td>
                                     </tr>
-                                    <tr id="import_export_profile.system_default">
-                                        <td class="col-md-4">system_default</td>
-                                        <td class="col-md-3">tinyint(1) unsigned</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.source_entity">
-                                        <td class="col-md-4">source_entity</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.file_type">
-                                        <td class="col-md-4">file_type</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.delimiter">
-                                        <td class="col-md-4">delimiter</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.enclosure">
-                                        <td class="col-md-4">enclosure</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.mapping">
-                                        <td class="col-md-4">mapping</td>
-                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.created_at">
-                                        <td class="col-md-4">created_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_profile.updated_at">
-                                        <td class="col-md-4">updated_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="product_custom_field_set.product_version_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> product_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#product.version_id">product.version_id</a></td>
                                     </tr>    
                         </table>
                     </div>
@@ -8347,8 +8387,8 @@
         <div class="panel-wrapper">
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
-                    <h3 class="panel-title search-content jcorgFilterTextChild">import_export_log</h3>
-                    <span class="badge pull-right">11 rows</span>
+                    <h3 class="panel-title search-content jcorgFilterTextChild">mail_template_media</h3>
+                    <span class="badge pull-right">5 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -8362,49 +8402,25 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="import_export_log.id" class="info">
+                                    <tr id="mail_template_media.id" class="info">
                                         <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
-                                    <tr id="import_export_log.activity">
-                                        <td class="col-md-4">activity</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="mail_template_media.mail_template_id">
+                                        <td class="col-md-4">mail_template_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#mail_template.id">mail_template.id</a></td>
                                     </tr>
-                                    <tr id="import_export_log.state">
-                                        <td class="col-md-4">state</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="mail_template_media.language_id">
+                                        <td class="col-md-4">language_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#language.id">language.id</a></td>
                                     </tr>
-                                    <tr id="import_export_log.records">
-                                        <td class="col-md-4">records</td>
+                                    <tr id="mail_template_media.media_id">
+                                        <td class="col-md-4">media_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#media.id">media.id</a></td>
+                                    </tr>
+                                    <tr id="mail_template_media.position">
+                                        <td class="col-md-4">position</td>
                                         <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_log.username">
-                                        <td class="col-md-4">username</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_log.profile_name">
-                                        <td class="col-md-4">profile_name</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_log.user_id">
-                                        <td class="col-md-4">user_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#user.id">user.id</a></td>
-                                    </tr>
-                                    <tr id="import_export_log.profile_id">
-                                        <td class="col-md-4">profile_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#import_export_profile.id">import_export_profile.id</a></td>
-                                    </tr>
-                                    <tr id="import_export_log.file_id">
-                                        <td class="col-md-4">file_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#import_export_file.id">import_export_file.id</a></td>
-                                    </tr>
-                                    <tr id="import_export_log.created_at">
-                                        <td class="col-md-4">created_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="import_export_log.updated_at">
-                                        <td class="col-md-4">updated_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -8498,7 +8514,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">product_export</h3>
-                    <span class="badge pull-right">19 rows</span>
+                    <span class="badge pull-right">20 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -8587,6 +8603,10 @@
                                     <tr id="product_export.currency_id">
                                         <td class="col-md-4">currency_id</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="product_export.paused_schedule">
+                                        <td class="col-md-4">paused_schedule</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
                         </table>
                     </div>
@@ -8705,9 +8725,9 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="log_entry.id">
-                                        <td class="col-md-4">id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="log_entry.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
                                     <tr id="log_entry.message">
                                         <td class="col-md-4">message</td>
@@ -8789,7 +8809,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">acl_role</h3>
-                    <span class="badge pull-right">4 rows</span>
+                    <span class="badge pull-right">6 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -8811,54 +8831,19 @@
                                         <td class="col-md-4">name</td>
                                         <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
+                                    <tr id="acl_role.description">
+                                        <td class="col-md-4">description</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="acl_role.privileges">
+                                        <td class="col-md-4">privileges</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
                                     <tr id="acl_role.created_at">
                                         <td class="col-md-4">created_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="acl_role.updated_at">
-                                        <td class="col-md-4">updated_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>    
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel-wrapper">
-            <div class="panel panel-default">
-                <div class="panel-heading jcorgFilterTextParent">
-                    <h3 class="panel-title search-content jcorgFilterTextChild">acl_resource</h3>
-                    <span class="badge pull-right">5 rows</span>
-                </div>
-                <div class="panel-body jcorgFilterTextParent">
-                    <p class="jcorgFilterTextChild">
-                        
-                    </p>
-        
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <tr>
-                                <th class="col-md-4">column</th>
-                                <th class="col-md-3">type</th>
-                                <th class="col-md-5">additional</th>
-                            </tr>
-                                    <tr id="acl_resource.resource" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> resource</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">Primary key</td>
-                                    </tr>
-                                    <tr id="acl_resource.privilege" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> privilege</td>
-                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">Primary key</td>
-                                    </tr>
-                                    <tr id="acl_resource.acl_role_id" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> acl_role_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#acl_role.id">acl_role.id</a></td>
-                                    </tr>
-                                    <tr id="acl_resource.created_at">
-                                        <td class="col-md-4">created_at</td>
-                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
-                                    </tr>
-                                    <tr id="acl_resource.updated_at">
                                         <td class="col-md-4">updated_at</td>
                                         <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>    
@@ -9270,13 +9255,13 @@
                                 <th class="col-md-3">type</th>
                                 <th class="col-md-5">additional</th>
                             </tr>
-                                    <tr id="customer_recovery.id">
-                                        <td class="col-md-4">id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">&nbsp;</td>
+                                    <tr id="customer_recovery.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
                                     </tr>
-                                    <tr id="customer_recovery.customer_id" class="info">
-                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> customer_id</td>
-                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#customer.id">customer.id</a></td>
+                                    <tr id="customer_recovery.customer_id">
+                                        <td class="col-md-4">customer_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#customer.id">customer.id</a></td>
                                     </tr>
                                     <tr id="customer_recovery.hash">
                                         <td class="col-md-4">hash</td>
@@ -9354,7 +9339,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">order_line_item</h3>
-                    <span class="badge pull-right">26 rows</span>
+                    <span class="badge pull-right">27 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -9460,6 +9445,10 @@
                                         <td class="col-md-4">good</td>
                                         <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
+                                    <tr id="order_line_item.position">
+                                        <td class="col-md-4">position</td>
+                                        <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
                                     <tr id="order_line_item.custom_fields">
                                         <td class="col-md-4">custom_fields</td>
                                         <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
@@ -9540,7 +9529,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading jcorgFilterTextParent">
                     <h3 class="panel-title search-content jcorgFilterTextChild">product_cross_selling</h3>
-                    <span class="badge pull-right">11 rows</span>
+                    <span class="badge pull-right">12 rows</span>
                 </div>
                 <div class="panel-body jcorgFilterTextParent">
                     <p class="jcorgFilterTextChild">
@@ -9557,6 +9546,10 @@
                                     <tr id="product_cross_selling.id" class="info">
                                         <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
                                         <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="product_cross_selling.type">
+                                        <td class="col-md-4">type</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
                                     </tr>
                                     <tr id="product_cross_selling.position">
                                         <td class="col-md-4">position</td>
@@ -9755,4 +9748,605 @@
                     </div>
                 </div>
             </div>
-        </div><div class="text-right">generated at 25.05.2020 06:26:43.</div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">mail_template_translation</h3>
+                    <span class="badge pull-right">10 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="mail_template_translation.mail_template_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> mail_template_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#mail_template.id">mail_template.id</a></td>
+                                    </tr>
+                                    <tr id="mail_template_translation.language_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> language_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#language.id">language.id</a></td>
+                                    </tr>
+                                    <tr id="mail_template_translation.sender_name">
+                                        <td class="col-md-4">sender_name</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.subject">
+                                        <td class="col-md-4">subject</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.description">
+                                        <td class="col-md-4">description</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.content_html">
+                                        <td class="col-md-4">content_html</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.content_plain">
+                                        <td class="col-md-4">content_plain</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.custom_fields">
+                                        <td class="col-md-4">custom_fields</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="mail_template_translation.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">product_cross_selling_assigned_products</h3>
+                    <span class="badge pull-right">7 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="product_cross_selling_assigned_products.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="product_cross_selling_assigned_products.cross_selling_id">
+                                        <td class="col-md-4">cross_selling_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product_cross_selling.id">product_cross_selling.id</a></td>
+                                    </tr>
+                                    <tr id="product_cross_selling_assigned_products.product_id">
+                                        <td class="col-md-4">product_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product.id">product.id</a></td>
+                                    </tr>
+                                    <tr id="product_cross_selling_assigned_products.product_version_id">
+                                        <td class="col-md-4">product_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product.version_id">product.version_id</a></td>
+                                    </tr>
+                                    <tr id="product_cross_selling_assigned_products.position">
+                                        <td class="col-md-4">position</td>
+                                        <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="product_cross_selling_assigned_products.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="product_cross_selling_assigned_products.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">import_export_log</h3>
+                    <span class="badge pull-right">13 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="import_export_log.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="import_export_log.activity">
+                                        <td class="col-md-4">activity</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.state">
+                                        <td class="col-md-4">state</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.records">
+                                        <td class="col-md-4">records</td>
+                                        <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.username">
+                                        <td class="col-md-4">username</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.profile_name">
+                                        <td class="col-md-4">profile_name</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.user_id">
+                                        <td class="col-md-4">user_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#user.id">user.id</a></td>
+                                    </tr>
+                                    <tr id="import_export_log.profile_id">
+                                        <td class="col-md-4">profile_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#import_export_profile.id">import_export_profile.id</a></td>
+                                    </tr>
+                                    <tr id="import_export_log.file_id">
+                                        <td class="col-md-4">file_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#import_export_file.id">import_export_file.id</a></td>
+                                    </tr>
+                                    <tr id="import_export_log.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.config">
+                                        <td class="col-md-4">config</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_log.invalid_records_log_id">
+                                        <td class="col-md-4">invalid_records_log_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#import_export_log.id">import_export_log.id</a></td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">import_export_profile</h3>
+                    <span class="badge pull-right">11 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="import_export_profile.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="import_export_profile.name">
+                                        <td class="col-md-4">name</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.system_default">
+                                        <td class="col-md-4">system_default</td>
+                                        <td class="col-md-3">tinyint(1) unsigned</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.source_entity">
+                                        <td class="col-md-4">source_entity</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.file_type">
+                                        <td class="col-md-4">file_type</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.delimiter">
+                                        <td class="col-md-4">delimiter</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.enclosure">
+                                        <td class="col-md-4">enclosure</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.mapping">
+                                        <td class="col-md-4">mapping</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile.config">
+                                        <td class="col-md-4">config</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">import_export_profile_translation</h3>
+                    <span class="badge pull-right">5 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="import_export_profile_translation.import_export_profile_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> import_export_profile_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#import_export_profile.id">import_export_profile.id</a></td>
+                                    </tr>
+                                    <tr id="import_export_profile_translation.language_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> language_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#language.id">language.id</a></td>
+                                    </tr>
+                                    <tr id="import_export_profile_translation.label">
+                                        <td class="col-md-4">label</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile_translation.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="import_export_profile_translation.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">swag_paypal_pos_sales_channel</h3>
+                    <span class="badge pull-right">10 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.sales_channel_id">
+                                        <td class="col-md-4">sales_channel_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel.id">sales_channel.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.product_stream_id">
+                                        <td class="col-md-4">product_stream_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product_stream.id">product_stream.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.api_key">
+                                        <td class="col-md-4">api_key</td>
+                                        <td class="col-md-3">varchar(8192)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.media_domain">
+                                        <td class="col-md-4">media_domain</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.webhook_signing_key">
+                                        <td class="col-md-4">webhook_signing_key</td>
+                                        <td class="col-md-3">varchar(64)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.sync_prices">
+                                        <td class="col-md-4">sync_prices</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.replace">
+                                        <td class="col-md-4">replace</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">swag_paypal_pos_sales_channel_product</h3>
+                    <span class="badge pull-right">6 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_product.sales_channel_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> sales_channel_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#sales_channel.id">sales_channel.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_product.product_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> product_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_product.product_version_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> product_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_product.checksum">
+                                        <td class="col-md-4">checksum</td>
+                                        <td class="col-md-3">char(32)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_product.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_product.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">swag_paypal_pos_sales_channel_inventory</h3>
+                    <span class="badge pull-right">5 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_inventory.sales_channel_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> sales_channel_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#sales_channel.id">sales_channel.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_inventory.product_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> product_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#product.id">product.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_inventory.product_version_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> product_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#product.version_id">product.version_id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_inventory.stock">
+                                        <td class="col-md-4">stock</td>
+                                        <td class="col-md-3">int(11)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_inventory.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">swag_paypal_pos_sales_channel_run</h3>
+                    <span class="badge pull-right">7 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.sales_channel_id">
+                                        <td class="col-md-4">sales_channel_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#sales_channel.id">sales_channel.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.aborted_by_user">
+                                        <td class="col-md-4">aborted_by_user</td>
+                                        <td class="col-md-3">tinyint(1)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.task">
+                                        <td class="col-md-4">task</td>
+                                        <td class="col-md-3">varchar(16)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run.finished_at">
+                                        <td class="col-md-4">finished_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">swag_paypal_pos_sales_channel_run_log</h3>
+                    <span class="badge pull-right">8 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.run_id">
+                                        <td class="col-md-4">run_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#swag_paypal_pos_sales_channel_run.id">swag_paypal_pos_sales_channel_run.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.level">
+                                        <td class="col-md-4">level</td>
+                                        <td class="col-md-3">smallint(6)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.message">
+                                        <td class="col-md-4">message</td>
+                                        <td class="col-md-3">longtext</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.product_id">
+                                        <td class="col-md-4">product_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product.id">product.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.product_version_id">
+                                        <td class="col-md-4">product_version_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Foreign key: <a href="#product.version_id">product.version_id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_run_log.updated_at">
+                                        <td class="col-md-4">updated_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-wrapper">
+            <div class="panel panel-default">
+                <div class="panel-heading jcorgFilterTextParent">
+                    <h3 class="panel-title search-content jcorgFilterTextChild">swag_paypal_pos_sales_channel_media</h3>
+                    <span class="badge pull-right">5 rows</span>
+                </div>
+                <div class="panel-body jcorgFilterTextParent">
+                    <p class="jcorgFilterTextChild">
+                        
+                    </p>
+        
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="col-md-4">column</th>
+                                <th class="col-md-3">type</th>
+                                <th class="col-md-5">additional</th>
+                            </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_media.sales_channel_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> sales_channel_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#sales_channel.id">sales_channel.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_media.media_id" class="info">
+                                        <td class="col-md-4"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> media_id</td>
+                                        <td class="col-md-3">binary(16)</td><td class="col-md-5">Primary key, Foreign key: <a href="#media.id">media.id</a></td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_media.lookup_key">
+                                        <td class="col-md-4">lookup_key</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_media.url">
+                                        <td class="col-md-4">url</td>
+                                        <td class="col-md-3">varchar(255)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>
+                                    <tr id="swag_paypal_pos_sales_channel_media.created_at">
+                                        <td class="col-md-4">created_at</td>
+                                        <td class="col-md-3">datetime(3)</td><td class="col-md-5">&nbsp;</td>
+                                    </tr>    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div><div class="text-right">generated at 05.05.2021 07:23:09.</div>

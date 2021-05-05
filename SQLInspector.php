@@ -69,7 +69,7 @@ and
             if(isset($descriptions[$table['tableName']])) {
                 $htmlString .= $descriptions[$table['tableName']];
             } else {
-                echo '\ninformation for table ' . $table['tableName'] . ' required!';
+                echo 'information for table ' . $table['tableName'] . ' required!' . PHP_EOL;
             }
 
             $htmlString .= "

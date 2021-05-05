@@ -5,5 +5,5 @@ $USER = "USERNAME";
 $PASS = "PASSWORD";
 
 $NAMES = [
-    'xxxxxxx_5_5_7'
+    "xxxxxxxx_6_3_0_0"
 ];

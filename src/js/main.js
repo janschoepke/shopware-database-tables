@@ -91,28 +91,18 @@ var swVersions = {
                 "sw-5-6-3": {value: "sw-5-6-3", label: "5.6.3"},
                 "sw-5-6-4": {value: "sw-5-6-4", label: "5.6.4"},
                 "sw-5-6-5": {value: "sw-5-6-5", label: "5.6.5"},
-                "sw-5-6-6": {value: "sw-5-6-6", label: "5.6.6"}
+                "sw-5-6-6": {value: "sw-5-6-6", label: "5.6.6"},
+                "sw-5-6-7": {value: "sw-5-6-7", label: "5.6.7"},
+                "sw-5-6-8": {value: "sw-5-6-8", label: "5.6.8"},
+                "sw-5-6-9": {value: "sw-5-6-9", label: "5.6.9"},
             }
         }
     },
     "sw-6": {
-        // "sw-6-0": {
-        //     value: "sw-6|sw-6-0",
-        //     label: "6.0",
-        //     entries: {
-        //         "sw-6-0-0-ea-1": {value: "sw-6-0-0-ea-1", label: "6.0.0 (EA1)"},
-        //         "sw-6-0-0-ea-1-1": {value: "sw-6-0-0-ea-1-1", label: "6.0.0 (EA1.1)"},
-        //         "sw-6-0-0-ea-1-2": {value: "sw-6-0-0-ea-1-2", label: "6.0.0 (EA2)"}
-        //     },
-        // },
         "sw-6-1": {
             value: "sw-6|sw-6-1",
             label: "6.1",
             entries: {
-                "sw-6-1-0-rc1": {value: "sw-6-1-0-rc1", label: "6.1.0 (RC1)"},
-                "sw-6-1-0-rc2": {value: "sw-6-1-0-rc2", label: "6.1.0 (RC2)"},
-                "sw-6-1-0-rc3": {value: "sw-6-1-0-rc3", label: "6.1.0 (RC3)"},
-                "sw-6-1-0-rc4": {value: "sw-6-1-0-rc4", label: "6.1.0 (RC4)"},
                 "sw-6-1-0": {value: "sw-6-1-0", label: "6.1.0"},
                 "sw-6-1-1": {value: "sw-6-1-1", label: "6.1.1"},
                 "sw-6-1-2": {value: "sw-6-1-2", label: "6.1.2"},
@@ -126,8 +116,33 @@ var swVersions = {
             value: "sw-6|sw-6-2",
             label: "6.2",
             entries: {
-                "sw-6-2-0-rc1": {value: "sw-6-2-0-rc1", label: "6.2.0 (RC1)"},
-                "sw-6-2-0": {value: "sw-6-2-0", label: "6.2.0"}
+                "sw-6-2-0": {value: "sw-6-2-0", label: "6.2.0"},
+                //6.2.1 -> Release removed due to security issues
+                "sw-6-2-2": {value: "sw-6-2-2", label: "6.2.2"},
+                "sw-6-2-3": {value: "sw-6-2-3", label: "6.2.3"}
+            }
+        },
+        "sw-6-3": {
+            value: "sw-6|sw-6-3",
+            label: "6.3",
+            entries: {
+                "sw-6-3-0-0": {value: "sw-6-3-0-0", label: "6.3.0.0"},
+                "sw-6-3-0-1": {value: "sw-6-3-0-1", label: "6.3.0.1"},
+                "sw-6-3-0-2": {value: "sw-6-3-0-2", label: "6.3.0.2"},
+                "sw-6-3-1-0": {value: "sw-6-3-1-0", label: "6.3.1.0"},
+                "sw-6-3-1-1": {value: "sw-6-3-1-1", label: "6.3.1.1"},
+                "sw-6-3-2-0": {value: "sw-6-3-2-0", label: "6.3.2.0"},
+                "sw-6-3-2-1": {value: "sw-6-3-2-1", label: "6.3.2.1"},
+                "sw-6-3-3-0": {value: "sw-6-3-3-0", label: "6.3.3.0"},
+                "sw-6-3-3-1": {value: "sw-6-3-3-1", label: "6.3.3.1"},
+                "sw-6-3-4-0": {value: "sw-6-3-4-0", label: "6.3.4.0"},
+                "sw-6-3-4-1": {value: "sw-6-3-4-1", label: "6.3.4.1"},
+                "sw-6-3-5-0": {value: "sw-6-3-5-0", label: "6.3.5.0"},
+                "sw-6-3-5-1": {value: "sw-6-3-5-1", label: "6.3.5.1"},
+                "sw-6-3-5-2": {value: "sw-6-3-5-2", label: "6.3.5.2"},
+                "sw-6-3-5-3": {value: "sw-6-3-5-3", label: "6.3.5.3"},
+                "sw-6-3-5-4": {value: "sw-6-3-5-4", label: "6.3.5.4"},
+                "sw-6-4-0-0": {value: "sw-6-4-0-0", label: "6.4.0.0"},
             }
         }
     }
