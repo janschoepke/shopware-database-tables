@@ -59,7 +59,7 @@ and
         <div class=\"panel-wrapper\">
             <div class=\"panel panel-default\">
                 <div class=\"panel-heading jcorgFilterTextParent\">
-                    <h3 class=\"panel-title search-content jcorgFilterTextChild\">" . $table['tableName'] . "</h3>
+                    <h2 class=\"panel-title search-content jcorgFilterTextChild\">" . $table['tableName'] . "</h2>
                     <span class=\"badge pull-right\">" . sizeof($table['rowInformation']) . " rows</span>
                 </div>
                 <div class=\"panel-body jcorgFilterTextParent\">
