@@ -267,7 +267,9 @@ $shopware5TableDetails = [
     "s_mail_log_contact" => "<< no table description found >>", 
     "s_mail_log_document" => "<< no table description found >>", 
     "s_mail_log_recipient" => "<< no table description found >>", 
-    "s_plugin_schema_version" => "<< no table description found >>"
+    "s_plugin_schema_version" => "<< no table description found >>",
+    "s_sitemap_custom" => "<< no table description found >>",
+    "s_sitemap_exclude" => "<< no table description found >>"
 ];
 
 /**
@@ -487,6 +489,20 @@ $shopware6TableDetails = [
     "landing_page_tag" => "",
     "product_stream_mapping" => "",
     "currency_country_rounding" => "",
+    "bf_config" => "",
+    "bf_marketplace" => "",
+    "bf_product_to_delete" => "",
+    "app_cms_block" => "",
+    "bf_category_mapping" => "",
+    "bf_marketplace_settings" => "",
+    "app_payment_method" => "",
+    "app_cms_block_translation" => "",
+    "bf_marketplace_sales_channel" => "",
+    "payment_token" => "",
+    "webhook_event_log" => "",
+    "sales_channel_rule" => "",
+    "flow" => "",
+    "flow_sequence" => ""
 ];
 
 return array_merge($shopware5TableDetails, $shopware6TableDetails);

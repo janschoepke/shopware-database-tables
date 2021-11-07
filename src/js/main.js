@@ -95,6 +95,20 @@ var swVersions = {
                 "sw-5-6-7": {value: "sw-5-6-7", label: "5.6.7"},
                 "sw-5-6-8": {value: "sw-5-6-8", label: "5.6.8"},
                 "sw-5-6-9": {value: "sw-5-6-9", label: "5.6.9"},
+                "sw-5-6-10": {value: "sw-5-6-10", label: "5.6.10"},
+            }
+        },
+        "sw-5-7": {
+            value: "sw-5|sw-5-7",
+            label: "5.7",
+            entries: {
+                "sw-5-7-0": {value: "sw-5-7-0", label: "5.7.0"},
+                "sw-5-7-1": {value: "sw-5-7-1", label: "5.7.1"},
+                "sw-5-7-2": {value: "sw-5-7-2", label: "5.7.2"},
+                "sw-5-7-3": {value: "sw-5-7-3", label: "5.7.3"},
+                "sw-5-7-4": {value: "sw-5-7-4", label: "5.7.4"},
+                "sw-5-7-5": {value: "sw-5-7-5", label: "5.7.5"},
+                "sw-5-7-6": {value: "sw-5-7-6", label: "5.7.6"},
             }
         }
     },
@@ -149,6 +163,18 @@ var swVersions = {
             label: "6.4",
             entries: {
                 "sw-6-4-0-0": {value: "sw-6-4-0-0", label: "6.4.0.0"},
+                "sw-6-4-1-0": {value: "sw-6-4-1-0", label: "6.4.1.0"},
+                "sw-6-4-1-1": {value: "sw-6-4-1-1", label: "6.4.1.1"},
+                "sw-6-4-1-2": {value: "sw-6-4-1-2", label: "6.4.1.2"},
+                "sw-6-4-2-0": {value: "sw-6-4-2-0", label: "6.4.2.0"},
+                "sw-6-4-2-1": {value: "sw-6-4-2-1", label: "6.4.2.1"},
+                "sw-6-4-3-0": {value: "sw-6-4-3-0", label: "6.4.3.0"},
+                "sw-6-4-3-1": {value: "sw-6-4-3-1", label: "6.4.3.1"},
+                "sw-6-4-4-0": {value: "sw-6-4-4-0", label: "6.4.4.0"},
+                "sw-6-4-4-1": {value: "sw-6-4-4-1", label: "6.4.4.1"},
+                "sw-6-4-5-0": {value: "sw-6-4-5-0", label: "6.4.5.0"},
+                "sw-6-4-5-1": {value: "sw-6-4-5-1", label: "6.4.5.1"},
+                "sw-6-4-6-0": {value: "sw-6-4-6-0", label: "6.4.6.0"},
             }
         }
     }
