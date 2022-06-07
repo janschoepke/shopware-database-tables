@@ -502,7 +502,13 @@ $shopware6TableDetails = [
     "webhook_event_log" => "",
     "sales_channel_rule" => "",
     "flow" => "",
-    "flow_sequence" => ""
+    "flow_sequence" => "",
+    "script" => "",
+    "increment" => "",
+    "notification" => "",
+    "theme_child" => "",
+    "rule_tag" => "",
+    "custom_entity" => ""
 ];
 
 return array_merge($shopware5TableDetails, $shopware6TableDetails);
