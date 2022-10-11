@@ -508,7 +508,15 @@ $shopware6TableDetails = [
     "notification" => "",
     "theme_child" => "",
     "rule_tag" => "",
-    "custom_entity" => ""
+    "custom_entity" => "",
+    "app_script_condition" => "",
+    "app_flow_action" => "",
+    "app_flow_action_translation" => "",
+    "app_script_condition_translation" => "",
+    "order_transaction_capture" => "",
+    "order_transaction_capture_refund" => "",
+    "order_transaction_capture_refund_position" => "",
+    "app_administration_snippet" => ""
 ];
 
 return array_merge($shopware5TableDetails, $shopware6TableDetails);
