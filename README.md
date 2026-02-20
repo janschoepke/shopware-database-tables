@@ -1,14 +1,14 @@
 # Shopware Database Documentation
 
-⚠️ **Dieses Repository wird nicht mehr aktiv gepflegt.**
+⚠️ **This repository is no longer actively maintained.**
 
-Die Inhalte sind permanent umgezogen nach: **[swdb.dev](https://swdb.dev)**
+All content has permanently moved to: **[swdb.dev](https://swdb.dev)**
 
 ---
 
-Die neue Version bietet:
-- 203+ Shopware-Versionen (SW5 & SW6)
-- Interaktiver Schema-Browser
-- Schema-Vergleichstool
-- Volltextsuche über alle Tabellen & Spalten
-- FAQ & mehr
+The new version offers:
+- 203+ Shopware versions (SW5 & SW6)
+- Interactive schema browser
+- Schema comparison tool
+- Full-text search across all tables & columns
+- FAQ & more
